@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'master'
+      - 'google_maps'
     tags:
       - 'v*'
 
@@ -39,7 +40,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: flask_auth601_flask
+          images: gaganrohith/proj
 
       - name: Build and push
         uses: docker/build-push-action@v2
